@@ -1,0 +1,24 @@
+global:
+  scrape_interval: 15s  # Default scrape interval is 15 seconds
+
+scrape_configs:
+  # Scrape Kubernetes Node Exporter
+  - job_name: 'kubernetes-nodes'
+    metrics_path: '/metrics'
+    scheme: 'http'
+    kubernetes_sd_configs:
+      - role: node
+
+  # Scrape Kubernetes Services
+  - job_name: 'kubernetes-services'
+    metrics_path: '/metrics'
+    scheme: 'http'
+    kubernetes_sd_configs:
+      - role: service
+
+  # Scrape Kubernetes Pods
+  - job_name: 'kubernetes-pods'
+    metrics_path: '/metrics'
+    scheme: 'http'
+    kubernetes_sd_configs:
+      - role: pod
