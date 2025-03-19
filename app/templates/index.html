@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Web App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Muhammad Bilal 2022360 MidTerm Submission</h1>
+    <form action="/submit" method="post">
+        Name: <input type="text" name="name" required><br>
+        Email: <input type="email" name="email" required placeholder="example@giki.com"><br>
+        Phone: <input type="text" name="phone"><br>
+        Message: <textarea name="message" rows="4" cols="50" required></textarea><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
